@@ -10,7 +10,7 @@ checkSession();
 	<!-- Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>GED DSTN - Gestion Électronique des Documents</title>
+    <title>GED MOLO Service mstki - Gestion Électronique des Documents</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Streamline your business with our advanced CRM template.">
 	<meta name="keywords" content="Advanced CRM template, customer relationship management">
