@@ -1,4 +1,4 @@
-# GED DSTN sur XAMPP
+# GED mastaki sur XAMPP
 
 ## Prérequis
 - XAMPP installé
