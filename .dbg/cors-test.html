@@ -1,0 +1,17 @@
+﻿<!doctype html>
+<html><body><pre id="out">starting</pre><script>
+(async () => {
+  try {
+    const res = await fetch('http://localhost/team37/src/api/auth/login.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ email: 'admin@ged.com', password: 'Admin123!' }),
+      credentials: 'include'
+    });
+    const text = await res.text();
+    document.getElementById('out').textContent = JSON.stringify({ ok: res.ok, status: res.status, text });
+  } catch (e) {
+    document.getElementById('out').textContent = 'FETCH_ERROR ' + e.toString();
+  }
+})();
+</script></body></html>

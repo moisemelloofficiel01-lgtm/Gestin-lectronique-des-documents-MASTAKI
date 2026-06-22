@@ -1,0 +1,18 @@
+# CORS headers (LiteSpeed/InfinityFree compatible)
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+Header always set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With, Accept, Origin"
+Header always set Access-Control-Allow-Credentials "true"
+Header always set Access-Control-Max-Age "3600"
+
+RewriteEngine On
+
+# api/drive/ → api/drive/index.php
+RewriteRule ^api/drive/?$ api/drive/index.php [L,QSA]
+# api/share/ → api/share/index.php
+RewriteRule ^api/share/?$ api/share/index.php [L,QSA]
+
+# Regular files without .php extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
